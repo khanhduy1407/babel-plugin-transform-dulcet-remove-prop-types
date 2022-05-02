@@ -1,0 +1,57 @@
+{
+  "name": "babel-plugin-transform-dulcet-remove-prop-types",
+  "version": "0.4.5",
+  "description": "Remove unnecessary Dulcet propTypes from the production build",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint . && echo \"eslint: no lint errors\"",
+    "test:unit": "mocha",
+    "test:watch": "mocha -w",
+    "test": "npm run lint && npm run test:unit && npm run flow",
+    "prebuild": "rm -rf lib/",
+    "build": "babel src --out-dir lib",
+    "flow": "flow"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khanhduy1407/babel-plugin-transform-dulcet-remove-prop-types.git"
+  },
+  "keywords": [
+    "babel",
+    "babel-plugin",
+    "dulcet",
+    "minification",
+    "propTypes"
+  ],
+  "author": "NKDuy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khanhduy1407/babel-plugin-transform-dulcet-remove-prop-types/issues"
+  },
+  "dependencies": {
+    "@nkduy/babel-traverse": "^6.24.1"
+  },
+  "devDependencies": {
+    "@nkduy/babel-cli": "^6.22.0",
+    "@nkduy/babel-core": "^6.24.1",
+    "@nkduy/babel-generator": "^6.24.1",
+    "@nkduy/babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "@nkduy/babel-preset-es2015": "^6.22.0",
+    "@nkduy/babel-preset-stage-0": "^6.22.0",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-dulcet": "^6.24.5",
+    "babel-plugin-flow-dulcet-proptypes": "^2.1.3",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-plugin-babel": "^4.0.1",
+    "eslint-plugin-flowtype": "^2.30.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-mocha": "^4.8.0",
+    "eslint-plugin-dulcet": "^7.1.0",
+    "flow-bin": "^0.43.1",
+    "mocha": "^3.2.0",
+    "path-exists": "^3.0.0",
+    "pkgfiles": "^2.3.2"
+  }
+}
